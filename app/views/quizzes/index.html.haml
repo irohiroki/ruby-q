@@ -1,22 +1,7 @@
-%h1 Listing quizzes
-
-%table
-  %tr
-    %th Question
-    %th Answer
-    %th Ruby version
-    %th
-    %th
-    %th
-
-  - @quizzes.each do |quiz|
-    %tr
-      %td= quiz.question
-      %td= quiz.answer
-      %td= quiz.ruby_version
-      %td= link_to 'Show', quiz
-      %td= link_to 'Edit', edit_quiz_path(quiz)
-      %td= link_to 'Destroy', quiz, :confirm => 'Are you sure?', :method => :delete
+- @quizzes.each do |quiz|
+  %article.clearfix
+    %p.question= quiz.question
+    %p.ruby_version= quiz.ruby_version
 
 %br
 

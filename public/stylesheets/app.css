@@ -1,0 +1,48 @@
+article {
+	background-color: white;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	padding: 0 8px;
+}
+
+body {
+	background-color: #ddd;
+	color: #333;
+}
+
+section {
+	left: 50%;
+	margin-left: -240px;
+	position: absolute;
+	width: 480px;
+}
+
+.clearfix {
+   ⁄zoom:1;
+   display: block;
+}
+
+.clearfix:after {
+   clear: both;
+   content: '';
+   display: block;
+}
+
+.question {
+	float: left;
+	padding: 0 8px;
+	width: 336px;
+}
+
+.ruby_version {
+	background-image: -moz-linear-gradient(center bottom, rgb(222,17,17) 12%, rgb(255,201,201) 100%);
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.12, rgb(222,17,17)), color-stop(1.0, rgb(255,201,201)));
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	float: right;
+	height: 24px;
+	padding: 0 8px;
+	width: 96px;
+}
