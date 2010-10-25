@@ -1,9 +1,20 @@
+$u: 8px;
+
+@mixin gradient($sy, $sc, $ey, $ec) {
+	background-image: -moz-linear-gradient(top, $sc percentage($sy / 100), $ec percentage($ey / 100));
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop($sy / 100, $sc), color-stop($ey / 100, $ec));
+}
+
+@mixin radius($r) {
+	border-radius: $r;
+	-moz-border-radius: $r;
+	-webkit-border-radius: $r;
+}
+
 article {
+	@include radius($u);
 	background-color: white;
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
-	padding: 0 8px;
+	padding: 0 $u;
 }
 
 body {
@@ -13,9 +24,9 @@ body {
 
 section {
 	left: 50%;
-	margin-left: -240px;
+	margin-left: $u * -30;
 	position: absolute;
-	width: 480px;
+	width: $u * 60;
 }
 
 .clearfix {
@@ -31,18 +42,15 @@ section {
 
 .question {
 	float: left;
-	padding: 0 8px;
-	width: 336px;
+	padding: 0 $u;
+	width: $u * 42;
 }
 
 .ruby_version {
-	background-image: -moz-linear-gradient(center bottom, rgb(222,17,17) 12%, rgb(255,201,201) 100%);
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.12, rgb(222,17,17)), color-stop(1.0, rgb(255,201,201)));
-	border-radius: 8px;
-	-moz-border-radius: 8px;
-	-webkit-border-radius: 8px;
+	@include radius($u);
+	@include gradient(0, #ffc9c9, 88, #de1111);
 	float: right;
-	height: 24px;
-	padding: 0 8px;
-	width: 96px;
+	height: $u * 3;
+	padding: 0 $u;
+	width: $u * 12;
 }
