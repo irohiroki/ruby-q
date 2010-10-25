@@ -1,5 +1,7 @@
 .bundle
+.sass-cache
 db/*.sqlite3
 log/*.log
+public/stylesheets/*.css
 tmp/**/*
 db/schema.rb
