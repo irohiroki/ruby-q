@@ -9,5 +9,7 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
 group :development, :test do
+  gem 'autotest', '~> 4.4.2'
   gem 'rspec-rails', '~> 2.0.1'
+  gem 'ruby-debug19', '~> 0.11.6'
 end
