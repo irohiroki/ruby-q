@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'devise', :git => 'http://github.com/plataformatec/devise.git', :branch => 'omniauth'
+gem 'devise', :git => 'http://github.com/plataformatec/devise.git', :branch => 'master'
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
