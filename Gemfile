@@ -13,6 +13,5 @@ group :development, :test do
   gem 'autotest-growl', '~> 0.2.6'
   gem 'cucumber-rails', '~> 0.3.2'
   gem 'rspec-rails', '~> 2.0.1'
-  gem 'ruby-debug19', '~> 0.11.6'
   gem 'webrat', '~> 0.7.2'
 end
