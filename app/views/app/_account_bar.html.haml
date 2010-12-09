@@ -1,0 +1,6 @@
+%p.account_bar
+  - if anybody_signed_in?
+    Signed in as:
+    = current_user.name
+  - else
+    = link_to 'Sign in with Twitter', user_omniauth_authorize_path(:twitter)

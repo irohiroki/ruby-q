@@ -14,4 +14,5 @@ group :development, :test do
   gem 'cucumber-rails', '~> 0.3.2'
   gem 'rspec-rails', '~> 2.2.1'
   gem 'webrat', '~> 0.7.2'
+  gem 'webmock', '~> 1.6.1'
 end
