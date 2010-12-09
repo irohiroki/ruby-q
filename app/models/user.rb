@@ -3,5 +3,5 @@ class User < ActiveRecord::Base
 
   has_many :authentications
 
-  attr_accessible :email, :remember_me
+  attr_accessible :email, :name, :remember_me
 end
