@@ -1,6 +1,8 @@
 Rubyq::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => 'users/omniauth_callbacks' }
 
+  get 'auth' => 'global#auth', :as => :auth
+
   resources :quizzes
 
   # The priority is based upon order of creation:

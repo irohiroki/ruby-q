@@ -1,4 +1,6 @@
 class QuizzesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:index, :show]
+
   # GET /quizzes
   # GET /quizzes.xml
   def index
