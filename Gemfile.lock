@@ -1,12 +1,12 @@
 GIT
   remote: http://github.com/plataformatec/devise.git
-  revision: b70b72b
+  revision: d87521723d5976a863f3c80721a71a253f496861
   branch: master
   specs:
     devise (1.2.rc)
       bcrypt-ruby (~> 2.1.2)
-      orm_adapter (~> 0.0.2)
-      warden (~> 1.0.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
 
 GEM
   remote: http://rubygems.org/
@@ -42,7 +42,7 @@ GEM
     arel (2.0.6)
     autotest (4.4.2)
     autotest-growl (0.2.6)
-    bcrypt-ruby (2.1.2)
+    bcrypt-ruby (2.1.4)
     builder (2.1.2)
     crack (0.1.8)
     cucumber (0.9.4)
@@ -94,7 +94,7 @@ GEM
     oauth2 (0.1.0)
       faraday (~> 0.5.0)
       multi_json (~> 0.0.4)
-    orm_adapter (0.0.3)
+    orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -134,7 +134,7 @@ GEM
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     tzinfo (0.3.23)
-    warden (1.0.2)
+    warden (1.0.3)
       rack (>= 1.0.0)
     webmock (1.6.1)
       addressable (>= 2.2.2)
