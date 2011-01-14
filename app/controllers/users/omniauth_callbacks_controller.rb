@@ -11,4 +11,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # TODO flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', :kind => 'Twitter'
     sign_in_and_redirect auth.user, :event => :authentication
   end
+
+  protected
+
+  def after_omniauth_failure_path_for(scope)
+    auth_path
+  end
 end
