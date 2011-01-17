@@ -5,7 +5,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if auth.new_record?
       auth.build_user(:name => auth_params['user_info']['name'])
       unless auth.save
-        # TODO handle errors
+        flash[:alert] = I18n.t 'devise.failure.db'
+        redirect_to root_path
+        return
       end
     end
     # TODO flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', :kind => 'Twitter'

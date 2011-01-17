@@ -37,5 +37,17 @@ describe Users::OmniauthCallbacksController do
       warden.authenticated?(:user)
       response.should redirect_to(root_path)
     end
+
+    it 'does not sign in on database error' do
+      @auth = mock_model(Authentication).as_new_record.tap {|a|
+        a.stub(:build_user => nil, :save => false)
+      }
+      Authentication.stub(:find_or_initialize_by_provider_and_uid => @auth)
+
+      get :twitter
+      flash[:alert].should eq('Could not sign you in because of a database error. Please try later.')
+      warden.authenticated?(:user).should_not be
+      response.should redirect_to(root_path)
+    end
   end
 end
