@@ -21,7 +21,7 @@ describe Users::OmniauthCallbacksController do
       Authentication.should_receive(:find_or_initialize_by_provider_and_uid).with('twitter', '123').and_return(@auth)
 
       get :twitter
-      warden.authenticated?(:user)
+      warden.authenticated?(:user).should be
       response.should redirect_to(root_path)
     end
 
@@ -34,7 +34,7 @@ describe Users::OmniauthCallbacksController do
       Authentication.should_receive(:find_or_initialize_by_provider_and_uid).with('twitter', '123').and_return(@auth)
 
       get :twitter
-      warden.authenticated?(:user)
+      warden.authenticated?(:user).should be
       response.should redirect_to(root_path)
     end
 
